@@ -28,10 +28,10 @@ const router = createBrowserRouter([
 
     
   },
-   {
-    path: "*", // 👈 catch-all for unmatched routes
-    element: <ErrorPage />,
-    },
+  //  {
+  //   path: "*", // 👈 catch-all for unmatched routes
+  //   element: <ErrorPage />,
+  //   },
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
