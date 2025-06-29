@@ -328,3 +328,48 @@ body{
   font-weight: bold;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.error-page {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: sans-serif;
+}
+
+.error-page h1 {
+  font-size: 2rem;
+  color: #e82630;
+}
+
+.error-page p {
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #e82630;
+  text-decoration: none;
+  font-weight: 500;
+}

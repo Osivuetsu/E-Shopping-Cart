@@ -8,6 +8,7 @@ import ProductList from "./components/ProductList"
 import { CartProvider } from "./context/CartContext";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ErrorPage from './components/ErrorPage';
 
 
 
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout/>,
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     children:[
       {index: true, element: <ProductList/>},
       {path: "cart", element: <Cart/>},
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
     ]
 
     
-  }
+  },
+   {
+    path: "*", // 👈 catch-all for unmatched routes
+    element: <ErrorPage />,
+    },
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
