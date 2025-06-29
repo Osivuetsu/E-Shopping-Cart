@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Mouse",
+    "price": 5000,
+    "quantity":1,
+    "image": "/images/mouse.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Bluetooth Headphones",
+    "price": 12000,
+    "quantity":1,
+    "image": "/images/headphone.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Laptop Stand",
+    "price": 8000,
+    "quantity":1,
+    "image": "/images/usbc.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "USB-C Hub",
+    "price": 3500,
+    "quantity":1,
+    "image": "/images/powerbank.webp"
+  },
+  {
+    "id": 5,
+    "name": "Mechanical Keyboard",
+    "price": 15000,
+    "quantity":1,
+    "image": "/images/mech.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Portable SSD",
+    "price": 25000,
+    "quantity":1,
+    "image": "/images/ssd.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Smartwatch",
+    "price": 18000,
+    "quantity":1,
+    "image": "/images/watch.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Webcam",
+    "price": 7000,
+    "quantity":1,
+    "image": "/images/webcam.webp"
+  },
+  {
+    "id": 9,
+    "name": "Power Bank",
+    "price": 6500,
+    "quantity":1,
+    "image": "/images/powerbank.webp"
+  },
+  {
+    "id": 10,
+    "name": "Wireless Charger",
+    "price": 4000,
+    "quantity":1,
+    "image": "/images/wire.webp"
+  }
+]
