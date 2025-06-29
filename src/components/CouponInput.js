@@ -1,41 +1,58 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 
-function CouponInput({subtotal,onApplyDiscount}) {
+function CouponInput({ subtotal, onApplyDiscount }) {
+  const [coupon, setCoupon] = useState('');
+  const [error, setError] = useState('');
 
-const [coupon,setCoupon] = useState("")
-// const [discount,setDiscount] = useState(0)
+  const handleApplyCoupon = () => {
+    const code = coupon.trim().toUpperCase();
+    setError('');
 
-const handleApplyCoupon = () => {
-    let discount = 0
+    if (!code) return showError('Enter a coupon code');
+    if (!/^[A-Z0-9]{4,10}$/.test(code)) return showError('Invalid format');
 
-    if (coupon === "FREE10") {
-       discount = 10
-       toast.success("You've got $10 off");
-       
-    } else if(coupon === "FREE20") {
-        discount = subtotal * 0.2
-        toast.success("You've got 20% off");
-    } else (
-        toast.error('Invalid coupon entry')
-    )
+    let discount = 0;
 
-    onApplyDiscount(discount)
-}
+    if (code === 'FREE10') {
+      if (subtotal < 10) return showError('Min $10 required');
+      discount = 10;
+    } else if (code === 'FREE20') {
+      if (subtotal < 20) return showError('Min $20 required');
+      discount = subtotal * 0.2;
+    } else {
+      return showError('Invalid code');
+    }
+
+    onApplyDiscount(discount);
+    toast.success(`Discount applied: $${discount.toFixed(2)}`);
+    setCoupon('');
+  };
+
+  const showError = (msg) => {
+    setError(msg);
+    toast.error(msg);
+    onApplyDiscount(0);
+  };
 
   return (
-     <div className="coupon-section">
+    <div className="coupon-section">
+      <div className="coupon-input-wrapper">
         <input
-            type="text"
-            placeholder="Enter coupon code"
-            value={coupon}
-            onChange={(e) => setCoupon(e.target.value)}
-         />
-        <button onClick={handleApplyCoupon}>Apply</button>
-
-       
+          type="text"
+          placeholder="Enter coupon"
+          value={coupon}
+          onChange={(e) => setCoupon(e.target.value.toUpperCase())}
+          onKeyDown={(e) => e.key === 'Enter' && handleApplyCoupon()}
+          className={error ? 'input-error' : ''}
+        />
+        {error && <span className="error-message">{error}</span>}
       </div>
-  )
+      <button onClick={handleApplyCoupon} disabled={!coupon.trim()}>
+        Apply
+      </button>
+    </div>
+  );
 }
 
-export default CouponInput
+export default CouponInput;

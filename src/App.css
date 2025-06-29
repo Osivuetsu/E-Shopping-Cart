@@ -161,15 +161,10 @@ body{
   font-family: 'Manrope', 'Noto Sans', sans-serif;
   background: #fff;
   max-width: 900px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 
-@media (max-width: 760px) {
-  .cart-container {
-  
-  /* margin: 0 ; */
-}
-}
+
 
 
 .cart-breadcrumb {

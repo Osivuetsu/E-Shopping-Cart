@@ -1,6 +1,3 @@
-import React from 'react'
-import QuantityControl from './QuantityControl';
-
 
 function Productcard({ product, onAddToCart}) {
   return (
