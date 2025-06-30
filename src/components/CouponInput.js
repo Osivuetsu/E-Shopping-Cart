@@ -37,6 +37,9 @@ function CouponInput({ subtotal, onApplyDiscount }) {
 
   return (
     <div className="coupon-section">
+      <div>
+        Use 'FREE10' to get $10 off and 'FREE20' for 20% off
+      </div>
       <div className="coupon-input-wrapper">
         <input
           type="text"
