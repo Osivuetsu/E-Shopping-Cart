@@ -21,9 +21,8 @@ A responsive, single-page shopping cart web application built with **React**, us
 
 ## 📸 Screenshots
 
-> *(Add your screenshots here)*  
-> `./public/screenshots/home.png`  
-> `./public/screenshots/cart.png`
+> ./public/screenshots/home.png
+> ./public/screenshots/cart.png
 
 ---
 
