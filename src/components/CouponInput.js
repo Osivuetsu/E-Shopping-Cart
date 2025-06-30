@@ -39,9 +39,7 @@ function CouponInput({ subtotal, onApplyDiscount }) {
     <div className="coupon-section">
      
       <div className="coupon-input-wrapper">
-         <div>
-        Use 'FREE10' to get $10 off and 'FREE20' for 20% off
-      </div>
+        
 
 
         <input
@@ -52,6 +50,10 @@ function CouponInput({ subtotal, onApplyDiscount }) {
           onKeyDown={(e) => e.key === 'Enter' && handleApplyCoupon()}
           className={error ? 'input-error' : ''}
         />
+
+          <div>
+            Use 'FREE10' to get $10 off and 'FREE20' for 20% off
+          </div>
       </div>
       <button onClick={handleApplyCoupon} disabled={!coupon.trim()}>
         Apply
