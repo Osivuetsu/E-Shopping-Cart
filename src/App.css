@@ -68,7 +68,7 @@ body{
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Default for smaller screens */
+  
   gap: 20px;
   max-width: 1200px;
   width: 100%;
