@@ -290,6 +290,8 @@ grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Default for smal
 .coupon-section input {
   flex: 1;
   padding: 12px;
+margin-top:15px;
+
   border: 1px solid #e5dcdc;
   border-radius: 12px;
   font-size: 14px;
@@ -299,6 +301,7 @@ grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Default for smal
   padding: 10px 20px;
   background: #f4f0f0;
   border: none;
+margin-top:20px
   border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
