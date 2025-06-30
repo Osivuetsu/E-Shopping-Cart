@@ -46,11 +46,11 @@ function CouponInput({ subtotal, onApplyDiscount }) {
           onKeyDown={(e) => e.key === 'Enter' && handleApplyCoupon()}
           className={error ? 'input-error' : ''}
         />
-        {error && <span className="error-message">{error}</span>}
       </div>
       <button onClick={handleApplyCoupon} disabled={!coupon.trim()}>
         Apply
       </button>
+        {error && <span className="error-message">{error}</span>}
     </div>
   );
 }
