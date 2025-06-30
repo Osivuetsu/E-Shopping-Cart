@@ -12,7 +12,7 @@ const CartItem = ({ product, onQuantityChange, onDelete }) => {
           <div className="cart-item-details">
             <p className="item-title">{product.name}</p>
             <p className="item-meta">Price: ${product.price}</p>
-            <p className="item-meta">Size: {product.size}</p>
+          
           </div>
         </div>
 
